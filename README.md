@@ -50,23 +50,23 @@ The Camel routes used in this example are explained by the following diagram:
 4.  To build the project, execute the following:
 
 	```bash
-    mvn -s configuration/settings.xml clean package docker:build
-    ```
+    	mvn -s configuration/settings.xml clean package docker:build
+    	```
     
 5.  To run the project, execute the following:
 
 	```bash
-    docker run -p 10001:10001 -t example/order-fulfillment-standalone
-    ```
-
+    	docker run -p 10001:10001 -t example/order-fulfillment-standalone
+    	```
+	
 After you've finished running the docker example, be sure to tidy up:
-
+	
 	```bash
-     docker ps (to obtain the container ID)
-     docker stop <container ID>
-     docker rm <container ID>
-     ```
-     
+     	docker ps (to obtain the container ID)
+     	docker stop <container ID>
+     	docker rm <container ID>
+     	```
+	
 ## Viewing the Fuse Management Console (HawtIO)
 
 Once the application has started up successfully, in any web browser, go to `localhost:10001/hawtio/index.html` and select the Camel tab. You should see your Camel Routes running.  For the docker example, replace this with `http:\\docker-host-ip:10001/hawtio/index.html`.
