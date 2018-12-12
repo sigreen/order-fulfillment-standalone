@@ -59,12 +59,12 @@ The Camel routes used in this example are explained by the following diagram:
 	docker run -p 10001:10001 -t example/order-fulfillment-standalone
 	```
 	
-After you've finished running the docker example, be sure to tidy up:
+6.  After you've finished running the docker example, be sure to tidy up:
 	
 	```bash
 	docker ps (to obtain the container ID)
-     	docker stop <container ID>
-     	docker rm <container ID>
+	docker stop <container ID>
+	docker rm <container ID>
 	```
 	
 ## Viewing the Fuse Management Console (HawtIO)
