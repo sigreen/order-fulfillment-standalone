@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mappings xmlns="http://dozermapper.github.io/schema/bean-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://dozermapper.github.io/schema/bean-mapping https://dozermapper.github.io/schema/bean-mapping.xsd">
+    <configuration>
+        <wildcard>false</wildcard>
+    </configuration>
+    <mapping>
+        <class-a>generated_1544108426413.Order</class-a>
+        <class-b>fulfillment.Fulfillment</class-b>
+        <field>
+            <a>unitPrice</a>
+            <b>unitPrice</b>
+        </field>
+        <field>
+            <a>itemQty</a>
+            <b>itemQty</b>
+        </field>
+        <field>
+            <a>itemName</a>
+            <b>itemName</b>
+        </field>
+    </mapping>
+    <mapping>
+        <class-a>org.apache.camel.component.dozer.ExpressionMapper</class-a>
+        <class-b>fulfillment.Fulfillment</class-b>
+        <field custom-converter-id="_expressionMapping" custom-converter-param="header:itemDescription">
+            <a>expression</a>
+            <b>itemDescription</b>
+        </field>
+    </mapping>
+</mappings>
