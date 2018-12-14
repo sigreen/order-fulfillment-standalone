@@ -45,21 +45,23 @@ The Camel routes used in this example are explained by the following diagram:
 	
 2.  Ensure Docker is accessible from the CLI by typing `docker ps`.  You should get back an empty response indicating no docker images are running.
 
-3.  Run `docker-machine ip` to determine what the IP is for docker.  Update the hostname for `activemq.broker.url` located in `src/main/resources/application.properties` with the docker-machine IP.
+3.  Run `docker-machine ip` to determine what the IP is for docker. You'll need this IP to connect to the Fuse Management Console (hawt.IO) running inside the SpringBoot container.
 
-4.  To build the project, execute the following:
+4.  Ping your local host machine to capture you IP.  Update the hostname for `activemq.broker.url` located in `src/main/resources/application.properties` with your host machine IP.
+
+5.  To build the project, execute the following:
 
 	```bash
 	mvn -s configuration/settings.xml clean package docker:build
 	```
     
-5.  To run the project, execute the following:
+6.  To run the project, execute the following:
 
 	```bash
 	docker run -p 10001:10001 -t example/order-fulfillment-standalone
 	```
 	
-6.  After you've finished running the docker example, be sure to tidy up:
+7.  After you've finished running the docker example, be sure to tidy up:
 	
 	```bash
 	docker ps (to obtain the container ID)
